@@ -35,6 +35,7 @@ RUN mkdir /godotbuildspace
 # Move to the build space and export the .pck
 WORKDIR /godotbuildspace
 RUN git clone ${HTTPS_GIT_REPO} .
+RUN ls
 RUN godot --path /godotbuildspace --export-pack ${GODOT_EXPORT_PRESET} ${GODOT_GAME_NAME}.pck
 RUN mv ${GODOT_GAME_NAME}.pck /godotapp/
 
