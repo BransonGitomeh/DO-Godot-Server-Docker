@@ -35,6 +35,7 @@ RUN mkdir /godotbuildspace
 # Move to the build space and export the .pck
 WORKDIR /godotbuildspace
 RUN git clone https://github.com/BransonGitomeh/Godot-TopDown-Multiplayer-Game.git .
+RUN ls
 RUN cd Godot-Top-Down-Mulitplayer-Part-3-Loading-the-World
 RUN godot --path /godotbuildspace --export-pack ${GODOT_EXPORT_PRESET} ${GODOT_GAME_NAME}.pck
 RUN mv ${GODOT_GAME_NAME}.pck /godotapp/
