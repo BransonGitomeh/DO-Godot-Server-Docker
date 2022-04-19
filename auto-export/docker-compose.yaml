@@ -8,3 +8,5 @@ services:
       - "12345:12345/udp"
     tty: true
     container_name: godot-server
+    env_file:
+      - production.env
